@@ -27,8 +27,10 @@ import routerBindings, {
 } from "@refinedev/react-router-v6";
 import { ColorModeContextProvider } from "./contexts/color-mode";
 import { Header } from "./components/header";
+import {PostList} from "./components/PostList";
 
 function App() {
+  
   return (
     <BrowserRouter>
       <GitHubBanner />
@@ -48,8 +50,9 @@ function App() {
                   projectId: "T8ZloO-4QHPH8-6dyobZ",
                 }}
               >
-                <Routes>
-                  <Route index element={<WelcomePage />} />
+                <Routes>  
+                  <Route index element={<PostList />} />
+
                 </Routes>
                 <RefineKbar />
                 <UnsavedChangesNotifier />
